@@ -1,0 +1,31 @@
+{
+  "name": "koa-location",
+  "version": "1.0.0",
+  "description": "Location information about client via user's IP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RagazziMoscow/koa-location.git"
+  },
+  "keywords": [
+    "IP",
+    "location"
+  ],
+  "author": "aerodromio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RagazziMoscow/koa-location/issues"
+  },
+  "homepage": "https://github.com/RagazziMoscow/koa-location#readme",
+  "dependencies": {
+    "iplocation": "^5.0.0"
+  },
+  "devDependencies": {
+    "koa": "^2.3.0",
+    "koa-ejs": "^4.1.0",
+    "koa-logger": "^3.0.1"
+  }
+}
