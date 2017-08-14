@@ -1,2 +1,62 @@
 # koa-location
-Location information about client via user's IP.
+Koa middleware getting location information about client via user's IP.
+
+### Install
+---
+Install with [npm](https://npmjs.org)
+
+```
+$ npm install koa-location --save
+```
+
+### Usage
+
+This module works detects the location of client by requests to following providers:
+- https://freegeoip.net/
+- https://ipapi.co/
+
+##### Example without auto detecting of location
+
+```javascript
+var Koa = require('koa');
+var app = new Koa();
+var location = require('koa-location');
+
+app.use(location());
+
+app.use(async (ctx, next) => {
+	await ctx.request.detect();
+	ctx.body = 'Ce Kavo';
+	console.log(ctx.request.locationData); // getting the location info
+});
+
+var port = 8000;
+app.listen(port, ()=> {
+	console.log('Сервер работает на порту ' + port);
+});
+```
+
+##### Example with auto detecting of location
+```javascript
+var Koa = require('koa');
+var app = new Koa();
+var location = require('koa-location');
+
+app.use(location({
+	autoDetect: true
+}));
+
+app.use(async (ctx, next) => {
+	ctx.body = 'Ce Kavo';
+	console.log(ctx.request.locationData);  // getting the location info
+});
+
+var port = 8000;
+app.listen(port, ()=> {
+	console.log('Сервер работает на порту ' + port);
+});
+```
+
+If you not set to ***true*** the **autoDetect** option you need for calling additionaly the **detect()** function of the request object.
+
+By default, **autoDetect** is ***false***.
