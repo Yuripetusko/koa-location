@@ -15,6 +15,16 @@ This module works detects the location of client by requests to following provid
 - https://freegeoip.net/
 - https://ipapi.co/
 
+Example of the object you will get with location information
+'''javasscript
+{
+ code: "BG",
+ country: "Bulgaria",
+ region: "Burgas",
+ city: "Burgas"
+}
+'''
+
 ##### Example without auto detecting of location
 
 ```javascript
@@ -27,7 +37,7 @@ app.use(location());
 app.use(async (ctx, next) => {
 	await ctx.request.detect();
 	ctx.body = 'Ce Kavo';
-	console.log(ctx.request.locationData); // getting the location info
+	console.log(ctx.request.locationData); // => getting the location info
 });
 
 var port = 8000;
@@ -48,7 +58,7 @@ app.use(location({
 
 app.use(async (ctx, next) => {
 	ctx.body = 'Ce Kavo';
-	console.log(ctx.request.locationData);  // getting the location info
+	console.log(ctx.request.locationData);  // => getting the location info
 });
 
 var port = 8000;

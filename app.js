@@ -2,7 +2,7 @@ var Koa = require('koa');
 var app = new Koa();
 //app.proxy = true;
 
-var middleware = require('./index.js');
+var middleware = require('./lib');
 
 app.use(middleware({
 	autoDetect: true
