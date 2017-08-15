@@ -69,4 +69,30 @@ app.listen(port, ()=> {
 
 If you not set to **true** the **autoDetect** option you need for calling additionaly the **detect()** function of the request object.
 
-By default, **autoDetect** is ***false***.
+By default, **autoDetect** is **false**.
+
+###### Support for FreeUlrs when **autoDetect** is **true**
+
+When **autoDetect** is **true**, the detecting of location will not runs.
+
+```javascript
+var Koa = require('koa');
+var app = new Koa();
+var location = require('koa-location');
+
+app.use(location({
+	autoDetect: true,
+	freeUrls: ['/', '/cekavo','/hello']
+}));
+
+app.use(async(ctx, next) => {
+	ctx.body = 'Ce Kavo';
+	// detecing will runs if request url is not included in the array of free urls
+	console.log(ctx.request.locationData); 
+});
+
+var port = 8000;
+app.listen(port, () => {
+	console.log('Сервер работает на порту ' + port);
+});
+```
