@@ -16,14 +16,14 @@ This module works detects the location of client by requests to following provid
 - https://ipapi.co/
 
 Example of the object you will get with location information
-'''javasscript
+```javasscript
 {
  code: "BG",
  country: "Bulgaria",
  region: "Burgas",
  city: "Burgas"
 }
-'''
+```
 
 ##### Example without auto detecting of location
 
@@ -67,6 +67,6 @@ app.listen(port, ()=> {
 });
 ```
 
-If you not set to ***true*** the **autoDetect** option you need for calling additionaly the **detect()** function of the request object.
+If you not set to **true** the **autoDetect** option you need for calling additionaly the **detect()** function of the request object.
 
 By default, **autoDetect** is ***false***.
