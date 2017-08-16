@@ -12,7 +12,7 @@ app.use(middleware({
 app.use(async(ctx, next) => {
 	ctx.body = 'Ce Kavo';
 	//await ctx.request.detect();
-	console.log(ctx.request.locationData);
+	console.log(ctx.request.location);
 });
 
 var port = 8000;

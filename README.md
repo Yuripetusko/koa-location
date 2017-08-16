@@ -21,7 +21,9 @@ Example of the object you will get with location information
  code: "BG",
  country: "Bulgaria",
  region: "Burgas",
- city: "Burgas"
+ city: "Burgas",
+ latitude: 42.5,
+ longitude: 27.4667
 }
 ```
 
@@ -37,7 +39,7 @@ app.use(location());
 app.use(async (ctx, next) => {
 	await ctx.request.detect();
 	ctx.body = 'Ce Kavo';
-	console.log(ctx.request.locationData); // => getting the location info
+	console.log(ctx.request.location); // => getting the location info
 });
 
 var port = 8000;
@@ -58,7 +60,7 @@ app.use(location({
 
 app.use(async (ctx, next) => {
 	ctx.body = 'Ce Kavo';
-	console.log(ctx.request.locationData);  // => getting the location info
+	console.log(ctx.request.location);  // => getting the location info
 });
 
 var port = 8000;
@@ -88,7 +90,7 @@ app.use(location({
 app.use(async(ctx, next) => {
 	ctx.body = 'Ce Kavo';
 	// detecing will runs if request url is not included in the array of free urls
-	console.log(ctx.request.locationData); 
+	console.log(ctx.request.location); 
 });
 
 var port = 8000;

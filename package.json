@@ -1,6 +1,6 @@
 {
   "name": "koa-location",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Location information about client via user's IP.",
   "main": "./lib/index.js",
   "scripts": {
