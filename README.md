@@ -37,14 +37,14 @@ var location = require('koa-location');
 app.use(location());
 
 app.use(async (ctx, next) => {
-	await ctx.request.detect();
-	ctx.body = 'Ce Kavo';
-	console.log(ctx.request.location); // => getting the location info
+    await ctx.request.detect();
+    ctx.body = 'Ce Kavo';
+    console.log(ctx.request.location); // => getting the location info
 });
 
 var port = 8000;
 app.listen(port, ()=> {
-	console.log('Сервер работает на порту ' + port);
+    console.log('Сервер работает на порту ' + port);
 });
 ```
 
@@ -55,17 +55,17 @@ var app = new Koa();
 var location = require('koa-location');
 
 app.use(location({
-	autoDetect: true
+    autoDetect: true
 }));
 
 app.use(async (ctx, next) => {
-	ctx.body = 'Ce Kavo';
-	console.log(ctx.request.location);  // => getting the location info
+    ctx.body = 'Ce Kavo';
+    console.log(ctx.request.location);  // => getting the location info
 });
 
 var port = 8000;
 app.listen(port, ()=> {
-	console.log('Сервер работает на порту ' + port);
+    console.log('Сервер работает на порту ' + port);
 });
 ```
 
@@ -83,18 +83,18 @@ var app = new Koa();
 var location = require('koa-location');
 
 app.use(location({
-	autoDetect: true,
-	freeUrls: ['/', '/cekavo','/hello']
+    autoDetect: true,
+    freeUrls: ['/', '/cekavo','/hello']
 }));
 
 app.use(async(ctx, next) => {
-	ctx.body = 'Ce Kavo';
-	// detecing will runs if request url is not included in the array of free urls
-	console.log(ctx.request.location); 
+    ctx.body = 'Ce Kavo';
+    // detecing will runs if request url is not included in the array of free urls
+    console.log(ctx.request.location); 
 });
 
 var port = 8000;
 app.listen(port, () => {
-	console.log('Сервер работает на порту ' + port);
+    console.log('Сервер работает на порту ' + port);
 });
 ```
