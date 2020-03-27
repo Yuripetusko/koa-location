@@ -352,7 +352,7 @@ ip-validator@0.0.1:
 
 "iplocation@https://github.com/Yuripetusko/iplocation.git#master":
   version "6.1.0"
-  resolved "https://github.com/Yuripetusko/iplocation.git#c345aa16c43b331dca8fc554f08dbedd0fa17df7"
+  resolved "https://github.com/Yuripetusko/iplocation.git#db9d2ec36953b6a2b1e57b5889fb8b4c6c26118d"
   dependencies:
     debug "^3.0.0"
     ip-validator "0.0.1"
