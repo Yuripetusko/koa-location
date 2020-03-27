@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/RagazziMoscow/koa-location#readme",
   "dependencies": {
-    "iplocation": "^5.0.0"
+    "iplocation": "https://github.com/Yuripetusko/iplocation.git#master"
   },
   "devDependencies": {
     "koa": "^2.3.0",
