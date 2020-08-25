@@ -350,9 +350,9 @@ ip-validator@0.0.1:
   resolved "https://registry.yarnpkg.com/ip-validator/-/ip-validator-0.0.1.tgz#659eb6001d38c35beab51455a2f751b843299eb5"
   integrity sha1-ZZ62AB04w1vqtRRVovdRuEMpnrU=
 
-"iplocation@https://github.com/Yuripetusko/iplocation.git#master":
-  version "6.1.0"
-  resolved "https://github.com/Yuripetusko/iplocation.git#db9d2ec36953b6a2b1e57b5889fb8b4c6c26118d"
+"iplocation@https://github.com/Yuripetusko/iplocation.git#6.1.2":
+  version "6.1.2"
+  resolved "https://github.com/Yuripetusko/iplocation.git#946fc25463db54e92ffafdab7a05a5a7e8f8c713"
   dependencies:
     debug "^3.0.0"
     ip-validator "0.0.1"

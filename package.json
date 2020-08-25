@@ -1,6 +1,6 @@
 {
   "name": "koa-location",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Location information about client via user's IP.",
   "main": "./lib/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/RagazziMoscow/koa-location#readme",
   "dependencies": {
-    "iplocation": "https://github.com/Yuripetusko/iplocation.git#master"
+    "iplocation": "https://github.com/Yuripetusko/iplocation.git#6.1.2"
   },
   "devDependencies": {
     "koa": "^2.3.0",
